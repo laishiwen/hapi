@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta name="referrer" content="always" />
+    <meta name="applicable-device" content="pc">
+    <meta name="mobile-agent" content="format=html5; url=//yun.xizi.com">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>西子云xiziyun.com-营销技术解决方案</title>
+    <meta name="keywords" Content="自媒体,营销,互动营销解决方案" />
+    <meta name="description" Content="西子云为站点自媒体商家提供互动营销技术解决方案" />
+    <meta name="copyright" content="本网站版权归西子云所有" />
+    <meta name="author" content="西小文" />
+    <meta name="lowest-browser-support" content="IE8" />
+    <meta name="revised" content="设计网的修改时间, 25/10/2018" />
+    <meta name="robots" content="none" />
+    <meta name="referrer" content="always" />
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+    <meta name="location" content="province=广东;city=惠州;coord=114.42381,23.110985" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.xiziyun.com/" />
+    <meta property="og:title" content="西子云xiziyun.com-营销技术解决方案" />
+    <meta property="og:image" content="https://img.xizi.com/uploads/yun/h5/share.png" />
+    <meta property="og:description" content="西子云为站点自媒体商家提供互动营销技术解决方案" />
+    <meta property="og:site_name" content="西子云" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:image:width" content="100" />
+    <meta property="og:image:height" content="100" />
+
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="//www.xiziyun.com">
+    <link rel="dns-prefetch" href="//www.xiziyun.com">
+
+    <script>
+        var browser = {
+            versions: function () {
+                var u = navigator.userAgent, app = navigator.appVersion;
+                return {//移动终端浏览器版本信息 
+                    trident: u.indexOf('Trident') > -1, //IE内核
+                    presto: u.indexOf('Presto') > -1, //opera内核
+                    webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+                    gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+                    mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+                    ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+                    android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+                    iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器
+                    iPad: u.indexOf('iPad') > -1, //是否iPad  
+                    webApp: u.indexOf('Safari') == -1, //是否web应该程序，没有头部与底部
+                    weixin: u.indexOf('MicroMessenger') > -1, //是否微信 
+                    qq: u.match(/\sQQ/i) == " qq" //是否QQ
+                };
+            }(),
+            language: (navigator.browserLanguage || navigator.language).toLowerCase()
+        }
+
+        if (browser.versions.mobile || browser.versions.ios || browser.versions.android ||
+            browser.versions.iPhone || browser.versions.iPad) {
+            window.location = "https://yun.xizi.com/";
+        }
+    </script>
+    <script src="./js/header.js"></script>
+</head>
+
+<body>
+    <!--[if IE]>
+        <script src="./js/html5shiv.js"></script>
+        <script src="./js/respond.js"></script>
+        <div class="prompt">
+            <h3>为了您更好的浏览体验，推荐升级以下的浏览器</h3>
+            <div class="container">
+                <a href="https://browser.qq.com/">
+                    <img src="https://img.xizi.com/uploads/yun/pc/qq.png" alt="">
+                </a>
+                <a href="https://browser.360.cn/ee/">
+                    <img src="https://img.xizi.com/uploads/yun/pc/360.png" alt="">
+                </a>
+            </div>
+        </div>
+    <![endif]-->
+    <div id="loading" class="loading-layer"></div>
+    <div class="navigation wow fadeInDown" data-wow-duration="2000ms" data-wow-timing-function="linear" id="navigation">
+        <div class="navigation-left">
+            <img class="logo" src="https://img.xizi.com/uploads/yun/pc/logo.png" />
+
+            <div class="brand">
+                西子科技旗下品牌
+            </div>
+        </div>
+        <div class="navigation-right clear">
+            <ul class="navigation-right-list">
+                <li>
+                    <a href="#product">
+                        产品介绍
+                    </a>
+                </li>
+                <li>
+                    <a href="#support">
+                        客户展示
+                    </a>
+                </li>
+                <li>
+                    <a href="#copyright">
+                        联系我们
+                    </a>
+                </li>
+                <div class="login" onclick="alert('功能陆续开放中...')">
+                    登录
+                </div>
+            </ul>
+        </div>
+    </div>
+    <div class="banner wow fadeInUp" data-wow-duration="2000ms" data-wow-timing-function="linear" id="banner">
+        <h1 class="wow slideInDown">营销技术解决方案</h1>
+        <img class="left wow fadeInLeft" src="https://img.xizi.com/uploads/yun/pc/banner/left.png" alt="">
+        <img class="center wow pulse" src="https://img.xizi.com/uploads/yun/pc/banner/center.png"
+            data-wow-timing-function="ease-in-out" data-wow-iteration="infinite" data-wow-duration="6000ms" alt="">
+        <img class="xzy" src="https://img.xizi.com/uploads/yun/pc/banner/xzy.png" alt="">
+        <img class="right wow fadeInRight" src="https://img.xizi.com/uploads/yun/pc/banner/right.png" alt="">
+    </div>
+    <div class="Introduction">
+        <div>
+            <h2 class="wow fadeInDown">西子云小程序 企业营销新利器</h2>
+            <ul class="Introduction-list">
+                <li>
+                    <div class="wow bounceInUp" data-wow-delay=".05s">
+                        <img src="https://img.xizi.com/uploads/yun/pc/icon/team.png" alt="">
+                    </div>
+                    <p class="wow fadeIn" data-wow-delay=".45s">专业研发团队</p>
+                </li>
+                <li>
+                    <div class="wow bounceInUp" data-wow-delay=".15s">
+                        <img src="https://img.xizi.com/uploads/yun/pc/icon/market.png" alt="">
+                    </div>
+                    <p class="wow fadeIn" data-wow-delay=".55s">深耕本地市场</p>
+                </li>
+                <li>
+                    <div class="wow bounceInUp" data-wow-delay=".25s">
+                        <img src="https://img.xizi.com/uploads/yun/pc/icon/case.png" alt="">
+                    </div>
+                    <p class="wow fadeIn" data-wow-delay=".65s">创新成功案例</p>
+                </li>
+                <li>
+                    <div class="wow bounceInUp" data-wow-delay=".35s">
+                        <img src="https://img.xizi.com/uploads/yun/pc/icon/support.png" alt="">
+                    </div>
+                    <p class="wow fadeIn" data-wow-delay=".75s">全案运营支持</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="program">
+        <ul class="program-list">
+            <li class="program-list-item odd">
+                <div>
+                    <div class="content left  wow fadeInLeft" data-wow-delay="300ms">
+                        <h1>品牌营销解决方案</h1>
+                        <p>营销裂变中结合品牌信息</p>
+                        <p>打造高传播活动方案</p>
+                    </div>
+                    <div class="photo wow fadeInUp" data-wow-delay="500ms">
+                        <img src="https://img.xizi.com/uploads/yun/pc/program/brand.png" alt="">
+                    </div>
+                </div>
+            </li>
+            <li class="program-list-item even">
+                <div>
+                    <div class="photo left wow fadeInUp" data-wow-delay="500ms">
+                        <img src="https://img.xizi.com/uploads/yun/pc/program/government_affairs.png" alt="">
+                    </div>
+                    <div class="content wow fadeInRight" data-wow-delay="300ms">
+                        <h1>政务宣传解决方案</h1>
+                        <p>满足政务宣传新需求</p>
+                        <p>构建行业竞争壁垒</p>
+                    </div>
+                </div>
+            </li>
+            <li class="program-list-item odd">
+                <div>
+                    <div class="content left wow fadeInLeft" data-wow-delay="300ms">
+                        <h1>交友相亲解决方案</h1>
+                        <p>让青年脱单更高效有趣</p>
+                        <p>引爆社交红利</p>
+                    </div>
+                    <div class="photo wow fadeInUp" data-wow-delay="500ms">
+                        <img src="https://img.xizi.com/uploads/yun/pc/program/friends.png" alt="">
+                    </div>
+                </div>
+            </li>
+            <li class="program-list-item even">
+                <div>
+                    <div class="photo left wow fadeInUp" data-wow-delay="500ms">
+                        <img src="https://img.xizi.com/uploads/yun/pc/program/show.png" alt="">
+                    </div>
+                    <div class="content wow fadeInRight" data-wow-delay="300ms">
+                        <h1>线下活动解决方案</h1>
+                        <p>实现报名支付签到核销闭环</p>
+                        <p>提升效能助力行业增长</p>
+                    </div>
+                </div>
+            </li>
+            <li class="program-list-item odd">
+                <div>
+                    <div class="content left wow fadeInLeft" data-wow-delay="300ms">
+                        <h1>案例展示解决方案</h1>
+                        <p>多案例效果呈现</p>
+                        <p>助力业务拓展</p>
+                    </div>
+                    <div class="photo wow fadeInUp" data-wow-delay="500ms">
+                        <img src="https://img.xizi.com/uploads/yun/pc/program/community.png" alt="">
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="product" id="product">
+        <h2 class="wow fadeInDown">产品案例体验</h2>
+        <ul class="product-list clear">
+            <li class="wow flipInY" data-wow-delay=".2s">
+                <div class="tank">
+                    <div class="cover">
+                        <img src="https://img.xizi.com/uploads/yun/pc/cover/lottery.png" alt="">
+                    </div>
+                    <dl class="type-desc">
+                        <dt>
+                            <img src="https://img.xizi.com/uploads/yun/pc/cover/icon/activity.png" alt="">
+                        </dt>
+                        <dd>
+                            <strong>
+                                翻牌小程序
+                            </strong>
+                            <span>
+                                类别：品牌裂变
+                            </span>
+                        </dd>
+                    </dl>
+                    <div class="show-mini-program">
+                        <img src="https://img.xizi.com/uploads/yun/pc/mini/lottery.jpg" alt="">
+                        <p>
+                            用户邀请好友助力集齐卡牌从而获得奖品
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li class="wow flipInY" data-wow-delay=".4s">
+                <div class="tank">
+                    <div class="cover">
+                        <img src="https://img.xizi.com/uploads/yun/pc/cover/vote.png" alt="">
+                    </div>
+                    <dl class="type-desc">
+                        <dt>
+                            <img src="https://img.xizi.com/uploads/yun/pc/cover/icon/vote.png" alt="">
+                        </dt>
+                        <dd>
+                            <strong>
+                                投票小程序
+                            </strong>
+                            <span>
+                                类别：品牌裂变
+                            </span>
+                        </dd>
+                    </dl>
+                    <div class="show-mini-program">
+                        <img src="https://img.xizi.com/uploads/yun/pc/mini/vote.jpg" alt="">
+                        <p>
+                            新增投票贡献榜，深度挖掘社交流量
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li class="wow flipInY" data-wow-delay=".6s">
+                <div class="tank">
+                    <div class="cover">
+                        <img src="https://img.xizi.com/uploads/yun/pc/cover/quiz.png" alt="">
+                    </div>
+                    <dl class="type-desc">
+                        <dt>
+                            <img src="https://img.xizi.com/uploads/yun/pc/cover/icon/quiz.png">
+                        </dt>
+                        <dd>
+                            <strong>
+                                竞答王者
+                            </strong>
+                            <span>
+                                类别：政务宣传
+                            </span>
+                        </dd>
+                    </dl>
+                    <div class="show-mini-program">
+                        <img src="https://img.xizi.com/uploads/yun/pc/mini/quiz.jpg" alt="">
+                        <p>
+                            用户邀请好友一起答题并积累积分，积分排名获得相应奖品
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li class="wow flipInY" data-wow-delay=".2s">
+                <div class="tank">
+                    <div class="cover">
+                        <img src="https://img.xizi.com/uploads/yun/pc/cover/match_one_match.png" alt="">
+                    </div>
+                    <dl class="type-desc">
+                        <dt>
+                            <img src="https://img.xizi.com/uploads/yun/pc/cover/icon/match_one_match.png" alt="">
+                        </dt>
+                        <dd>
+                            <strong>
+                                配一配小程序
+                            </strong>
+                            <span>
+                                类别：交友相亲
+                            </span>
+                        </dd>
+                    </dl>
+                    <div class="show-mini-program">
+                        <img src="https://img.xizi.com/uploads/yun/pc/mini/match_one_match.jpg" alt="">
+                        <p>
+                            用户填写资料及完成性格测试题，从而匹配到心仪的对象
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li class="wow flipInY" data-wow-delay=".4s">
+                <div class="tank">
+                    <div class="cover">
+                        <img src="https://img.xizi.com/uploads/yun/pc/cover/activity.png" alt="">
+                    </div>
+                    <dl class="type-desc">
+                        <dt>
+                            <img src="https://img.xizi.com/uploads/yun/pc/cover/icon/activity.png" alt="">
+                        </dt>
+                        <dd>
+                            <strong>
+                                好活动小程序
+                            </strong>
+                            <span>
+                                类别：展会活动
+                            </span>
+                        </dd>
+                    </dl>
+                    <div class="show-mini-program">
+                        <img src="https://img.xizi.com/uploads/yun/pc/mini/activity.jpg" alt="">
+                        <p>
+                            活动报名付款签到核销，助力高效做活动
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li class="wow flipInY" data-wow-delay=".6s">
+                <div class="tank">
+                    <div class="cover">
+                        <img src="https://img.xizi.com/uploads/yun/pc/cover/case.png" alt="">
+                    </div>
+                    <dl class="type-desc">
+                        <dt>
+                            <img src="https://img.xizi.com/uploads/yun/pc/cover/icon/case.png" alt="">
+                        </dt>
+                        <dd>
+                            <strong>
+                                案例小程序
+                            </strong>
+                            <span>
+                                类别：社区资讯
+                            </span>
+                        </dd>
+                    </dl>
+                    <div class="show-mini-program">
+                        <img src="https://img.xizi.com/uploads/yun/pc/mini/case.jpg" alt="">
+                        <p>
+                            向客户展示公司做过的案例，提高销售谈单成功率
+                        </p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="support" id="support">
+        <h2 class="wow fadeInDown">100+ 合作伙伴都在使用西子云</h2>
+        <ul class="support-list clear">
+            <li class="wow fadeInUpBig">
+                <img src="https://img.xizi.com/uploads/yun/pc/support/hualongxiang.jpg" alt="">
+                <p>化龙巷</p>
+            </li>
+            <li class="wow fadeInUpBig">
+                <img src="https://img.xizi.com/uploads/yun/pc/support/ailuoyang.jpg" alt="">
+                <p>爱洛阳</p>
+            </li>
+            <li class="wow fadeInUpBig">
+                <img src="https://img.xizi.com/uploads/yun/pc/support/gusuwang.jpg" alt="">
+                <p>姑苏网</p>
+            </li>
+            <li class="wow fadeInUpBig">
+                <img src="https://img.xizi.com/uploads/yun/pc/support/kunshanluntan.jpg" alt="">
+                <p>昆山论坛</p>
+            </li>
+            <li class="wow fadeInUpBig">
+                <img src="https://img.xizi.com/uploads/yun/pc/support/echuzhou.jpg" alt="">
+                <p>E滁州</p>
+            </li>
+            <li class="wow fadeInUpBig">
+                <img src="https://img.xizi.com/uploads/yun/pc/support/jinmenshequwang.jpg" alt="">
+                <p>荆门社区网</p>
+            </li>
+            <li class="wow fadeInUpBig">
+                <img src="https://img.xizi.com/uploads/yun/pc/support/zhongshangshenghuowang.jpg" alt="">
+                <p>中山生活网</p>
+            </li>
+            <li class="wow fadeInUpBig">
+                <img src="https://img.xizi.com/uploads/yun/pc/support/zhezhongzaixian.jpg" alt="">
+                <p>浙中在线</p>
+            </li>
+            <li class="wow fadeInUpBig">
+                <img src="https://img.xizi.com/uploads/yun/pc/support/chongqinggouwukuang.jpeg" alt="">
+                <p>重庆购物狂</p>
+            </li>
+            <li class="wow fadeInUpBig">
+                <img src="https://img.xizi.com/uploads/yun/pc/support/yiwushibaqiang.jpg" alt="">
+                <p>义乌十八腔</p>
+            </li>
+            <li class="wow fadeInUpBig">
+                <img src="https://img.xizi.com/uploads/yun/pc/support/chongqinchaoshenghuo.jpg" alt="">
+                <p>重庆潮生活</p>
+            </li>
+            <li class="wow fadeInUpBig">
+                <img src="https://img.xizi.com/uploads/yun/pc/support/xizihupan.jpeg" alt="">
+                <p>西子湖畔</p>
+            </li>
+        </ul>
+    </div>
+    <div class="copyright" id="copyright">
+        <div class="container">
+            <img class="qrCode wow fadeInDown" src="https://img.xizi.com/uploads/yun/pc/qrcode.png" alt="">
+            <h2>
+                广东西子科技有限公司
+            </h2>
+            <p>Copyright©2002-<span id="year"></span> Xizi All Rights Reserved. 粤ICP备05007446号</p>
+        </div>
+    </div>
+    <div class="tools">
+        <a href="javascript:void(0);">
+            <img src="https://img.xizi.com/uploads/yun/pc/tools/contact.png" class="icon" alt="" />
+            <div class="info">
+                <div>
+                    <img class="mobile" src="https://img.xizi.com/uploads/yun/pc/tools/mobile.png" alt="">
+                    <span>18507524545</span>
+                </div>
+                <div>
+                    <img src="https://img.xizi.com/uploads/yun/pc/tools/email.png" alt="">
+                    <span>runhan@xizi.com</span>
+                </div>
+            </div>
+        </a>
+        <a href="javascript:void(0);">
+            <img src="https://img.xizi.com/uploads/yun/pc/tools/qrcode.png" class="icon" alt="" />
+            <div class="qrcode">
+                <img src="https://img.xizi.com/uploads/yun/pc/qrcode.png" alt="">
+            </div>
+        </a>
+        <a href="#navigation">
+            <img src="https://img.xizi.com/uploads/yun/pc/tools/top.png" class="icon" alt="" />
+        </a>
+    </div>
+    <script defer src="./js/footer.js"></script>
+</body>
+
+</html>

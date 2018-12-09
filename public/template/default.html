@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+  <head>
+    <meta name="referrer" content="always" />
+    <meta name="applicable-device" content="pc">
+    <meta name="mobile-agent" content="format=html5; url=//yun.xizi.com">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>西子云xiziyun.com-营销技术解决方案</title>
+    <meta name="keywords" Content="自媒体,营销,互动营销解决方案" />
+    <meta name="description" Content="西子云为站点自媒体商家提供互动营销技术解决方案" />
+    <meta name="copyright" content="本网站版权归西子云所有" />
+    <meta name="author" content="西小文" />
+    <meta name="lowest-browser-support" content="IE8" />
+    <meta name="revised" content="设计网的修改时间, 25/10/2018" />
+    <meta name="robots" content="none" />
+    <meta name="referrer" content="always" />
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+    <meta name="location" content="province=广东;city=惠州;coord=114.42381,23.110985" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.xiziyun.com/" />
+    <meta property="og:title" content="西子云xiziyun.com-营销技术解决方案" />
+    <meta property="og:image" content="https://img.xizi.com/uploads/yun/h5/share.png" />
+    <meta property="og:description" content="西子云为站点自媒体商家提供互动营销技术解决方案" />
+    <meta property="og:site_name" content="西子云" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:image:width" content="100" />
+    <meta property="og:image:height" content="100" />
+
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="//www.xiziyun.com">
+    <link rel="dns-prefetch" href="//www.xiziyun.com">
+
+    <script>
+      var browser = {
+        versions: function () {
+          var u = navigator.userAgent,
+            app = navigator.appVersion;
+          return { //移动终端浏览器版本信息 
+            trident: u.indexOf('Trident') > -1, //IE内核
+            presto: u.indexOf('Presto') > -1, //opera内核
+            webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+            gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+            mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+            ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+            android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+            iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器
+            iPad: u.indexOf('iPad') > -1, //是否iPad  
+            webApp: u.indexOf('Safari') == -1, //是否web应该程序，没有头部与底部
+            weixin: u.indexOf('MicroMessenger') > -1, //是否微信 
+            qq: u.match(/\sQQ/i) == " qq" //是否QQ
+          };
+        }(),
+        language: (navigator.browserLanguage || navigator.language).toLowerCase()
+      }
+
+      if (browser.versions.mobile || browser.versions.ios || browser.versions.android ||
+        browser.versions.iPhone || browser.versions.iPad) {
+        window.location = "https://yun.xizi.com/";
+      }
+
+    </script>
+  </head>
+
+  <body>
+    hello wrold
+  </body>
+
+</html>
