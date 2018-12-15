@@ -3,18 +3,9 @@ const views = require("./views")
 const server = require("./server")
 const routes = require("./routes")
 const models = require("./models")
-const plugins = require("./plugins")
+const plugins = require("./plugin")
 
-const initDb = async() => {
-    let sequelize = await models.sequelize;
-    sequelize.sync({
-        force: false
-    }).then(function(res) {
-        console.log("connection database successed")
-    }).catch(function(err) {
-        console.log("connection failed due to error: %s", err)
-    })
-}
+const { initDb } = require('./libs')
 
 const start = async() => {
     await server.register(plugins)
@@ -30,5 +21,5 @@ const start = async() => {
 }
 
 start().then(res => {
-    initDb()
+    initDb(models)
 })
