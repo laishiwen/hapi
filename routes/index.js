@@ -1,4 +1,4 @@
-const routeUser = require("./user")
+const routeAdmin = require("./admin")
 
 module.exports = [{
     method: "GET",
@@ -13,5 +13,5 @@ module.exports = [{
       return reply.view("default.html")
     }
   },
-  ...routeUser
+  ...routeAdmin
 ]

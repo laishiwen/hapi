@@ -1,15 +1,15 @@
-module.exports = (sequelize, DataTypes) => sequelize.define("user", {
+module.exports = (sequelize, DataTypes) => sequelize.define("admin", {
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true,
     },
-    usernick: {
+    username: {
         type: DataTypes.STRING,
         allowNull: false
     },
-    level: {
-        type: DataTypes.INTEGER,
+    password: {
+        type: DataTypes.STRING,
         allowNull: false
     }
 }, {

@@ -9,7 +9,7 @@ let models = require('../models')
 
 module.exports = {
     login: async(request, h) => {
-        console.log(request.payload.userInfo);
+        
         const {
             username,
             password
@@ -17,7 +17,7 @@ module.exports = {
 
         const encryptedPasswd = crypto.createHmac("sha256", process.env.PASSWD_SECRET).update(password).digest("hex");
 
-        const res = await models.user.findOne({
+        const res = await models.admin.findOne({
             where: {
                 username,
                 password: encryptedPasswd
@@ -32,6 +32,7 @@ module.exports = {
         })
 
         if (res) {
+            
             return h.response({
                 code: 0,
                 data: {

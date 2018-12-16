@@ -39,19 +39,10 @@ module.exports = [{
         plugin: require("vision")
     },
     {
-        plugin: require('hapi-pagination')
-    },
-    {
         plugin: require("hapi-auth-jwt2")
-    },
-    {
-        plugin: require('hapi-redis')
     },
     {
         plugin: require("hapi-swagger"),
         options: swaggerOptions
-    },
-    {
-        plugin: require("hapi-good")
     }
 ]

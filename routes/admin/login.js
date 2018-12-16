@@ -6,11 +6,11 @@ const controllers = require('../../controllers')
 module.exports = () => {
   return {
     method: "POST",
-    path: "/user/login",
-    handler: controllers.user.login,
+    path: "/admin/login",
+    handler: controllers.admin.login,
     config: {
       auth: false,
-      tags: ["api", "user"],
+      tags: ["api", "admin"],
       description: "用户登录",
       validate: {
         payload: {
