@@ -1,2 +1,0 @@
-# hapi
-hapi blog

@@ -1,25 +1,22 @@
-"use strict"
-const views = require("./views")
-const server = require("./server")
-const routes = require("./routes")
-const models = require("./models")
-const plugins = require("./plugin")
+require('env2')('./.env')
 
-const { initDb } = require('./libs')
+const Hapi = require('hapi');
 
-const start = async() => {
-    await server.register(plugins)
+const config = require('./config')
+const routes = require('./routes')
 
-    await server.views(views)
+const PluginHapiSwagger = require('./plugins/hapi-swagger')
 
-    await routes.forEach(route => server.route(route))
+const server = new Hapi.Server(config);
 
-    await server.start(err => {
-        if (err) throw err
-    })
-    console.log(`Server running at: ${server.info.uri}`)
+const init = async () => {
+  await server.register(PluginHapiSwagger)
+
+  server.route([...routes])
+
+  await server.start();
+
+  console.log(`Server running at: ${server.info.uri}`);
 }
 
-start().then(res => {
-    initDb(models)
-})
+init();

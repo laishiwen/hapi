@@ -1,17 +1,16 @@
-const routeAdmin = require("./admin")
+const Joi = require('joi')
+
+const orders = require('./orders')
+const shops = require('./shops')
 
 module.exports = [{
-    method: "GET",
-    path: "/",
-    handler: (request, reply) => {
-      return reply.file("index.html")
-    }
-  }, {
-    method: "GET",
-    path: "/view",
-    handler: (request, reply) => {
-      return reply.view("default.html")
-    }
+  method: 'GET',
+  path: '/',
+  handler: (request, h) => {
+    return 'hello HAPI';
   },
-  ...routeAdmin
-]
+  config: {
+    tags: ['api', 'tests'],
+    description: '测试hello-hapi',
+  }
+}, ...orders(Joi), ...shops(Joi)]
