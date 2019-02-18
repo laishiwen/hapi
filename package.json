@@ -19,6 +19,7 @@
   "devDependencies": {
     "cross-env": "^5.2.0",
     "env2": "^2.2.2",
+    "hapi-pagination": "^2.0.1",
     "hapi-swagger": "^9.3.0",
     "inert": "^5.1.2",
     "joi": "^14.3.1",
