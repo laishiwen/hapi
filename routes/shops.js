@@ -1,34 +1,87 @@
+const {
+  paginationDefine
+} = require('../utils/router-helper');
+
+const models = require('../models')
+
 const GROUP_NAME = 'shops'
 
-module.exports = (Joi) => [{
-    method: 'GET',
-    path: `/${GROUP_NAME}`,
-    handler: async(request, h) => {
-        return '获取店铺列表'
-    },
-    config: {
+module.exports = (Joi) => {
+  return [{
+      method: 'GET',
+      path: `/${GROUP_NAME}`,
+      handler: async (request, h) => {
+        const {
+          limit,
+          page
+        } = request.query
+
+        const {
+          rows: results,
+          count: totalCount
+        } = await models.shops.findAndCountAll({
+          attributes: ['id', 'name'],
+          limit,
+          offset: (page - 1) * limit
+        })
+
+        return {
+          results,
+          totalCount
+        }
+      },
+      config: {
         tags: ['api', GROUP_NAME],
-        description: '获取店铺列表'
-    }
-}, {
-    method: 'POST',
-    path: `/${GROUP_NAME}/{shop_id}/goods`,
-    handler: async(request, h) => {
-        return '获取店铺的商品列表'
+        description: '获取店铺列表',
+        validate: {
+          query: {
+            ...paginationDefine
+          }
+        }
+      }
     },
-    config: {
+    {
+      method: 'POST',
+      path: `/${GROUP_NAME}/{shop_id}/goods`,
+      handler: async (request, h) => {
+        const {
+          query: {
+            limit,
+            page
+          },
+          params: {
+            shop_id
+          }
+        } = request;
+        const {
+          rows: results,
+          count: totalCount
+        } = await models.goods.findAndCountAll({
+          where: {
+            shop_id
+          },
+          attributes: ['id', 'name'],
+          limit,
+          offset: (page - 1) * limit
+        })
+
+        return {
+          results,
+          totalCount
+        }
+      },
+      config: {
         tags: ['api', GROUP_NAME],
         description: '获取店铺的商品列表',
         validate: {
-            params: {
-                shop_id: Joi.string().required()
-            },
-            payload: {
-                shops_list: Joi.array().items(Joi.object().keys({
-                    shops_id: Joi.number().integer(),
-                    count: Joi.number().integer()
-                }))
-            }
+          params: {
+            shop_id: Joi.string().required().description('店铺的id')
+          },
+          query: {
+            ...paginationDefine
+          }
         }
+      }
     }
-}];
+  ]
+}
