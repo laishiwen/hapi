@@ -1,35 +1,35 @@
 {
-    "name": "hapi",
-    "version": "1.0.0",
-    "description": "HAPI RESTful AAPI\u001b[D\u001b[\u001b[D\u001b[D\u001b[C\u001b[C\u001b[\u001b\u001b[C\u001b[C\u001b[2~\u001b[C\u001b\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b API\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D",
-    "main": "app.js",
-    "scripts": {
-        "test": "\u001b[A\u001b[B",
-        "start": "cross-env NODE_ENV=development node_modules/.bin/nodemon app.js",
-        "createdb:dev": "node_modules/.bin/sequelize db:create",
-        "createtable": "node_modules/.bin/sequelize db:migrate",
-        "createtableundoall": "node_modules/.bin/sequelize db:migrate:undo:all",
-        "initdata": "node_modules/.bin/sequelize db:seed:all"
-    },
-    "author": "467158536@qq.com",
-    "license": "ISC",
-    "dependencies": {
-        "hapi": "^18.1.0"
-    },
-    "devDependencies": {
-        "cross-env": "^5.2.0",
-        "env2": "^2.2.2",
-        "hapi-auth-jwt2": "^8.3.0",
-        "hapi-pagination": "^2.0.1",
-        "hapi-swagger": "^9.3.0",
-        "inert": "^5.1.2",
-        "joi": "^14.3.1",
-        "jsonwebtoken": "^8.5.0",
-        "mysql2": "^1.6.5",
-        "nodemon": "^1.18.9",
-        "package": "^1.0.1",
-        "sequelize": "^4.42.0",
-        "sequelize-cli": "^5.4.0",
-        "vision": "^5.4.4"
-    }
+  "name": "hapi",
+  "version": "1.0.0",
+  "description": "HAPI RESTful AAPI\u001b[D\u001b[\u001b[D\u001b[D\u001b[C\u001b[C\u001b[\u001b\u001b[C\u001b[C\u001b[2~\u001b[C\u001b\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b API\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D",
+  "main": "app.js",
+  "scripts": {
+    "test": "\u001b[A\u001b[B",
+    "start": "cross-env NODE_ENV=development node_modules/.bin/nodemon app.js",
+    "createdb:dev": "node_modules/.bin/sequelize db:create",
+    "createtable": "node_modules/.bin/sequelize db:migrate",
+    "createtableundoall": "node_modules/.bin/sequelize db:migrate:undo:all",
+    "initdata": "node_modules/.bin/sequelize db:seed:all"
+  },
+  "author": "467158536@qq.com",
+  "license": "ISC",
+  "dependencies": {
+    "hapi": "^18.1.0"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "env2": "^2.2.2",
+    "hapi-auth-jwt2": "^8.3.0",
+    "hapi-pagination": "^2.1.0",
+    "hapi-swagger": "^9.3.0",
+    "inert": "^5.1.2",
+    "joi": "^14.3.1",
+    "jsonwebtoken": "^8.5.0",
+    "mysql2": "^1.6.5",
+    "nodemon": "^1.18.9",
+    "package": "^1.0.1",
+    "sequelize": "^4.42.0",
+    "sequelize-cli": "^5.4.0",
+    "vision": "^5.4.4"
+  }
 }

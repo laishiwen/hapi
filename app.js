@@ -15,14 +15,14 @@ const server = new Hapi.Server(config);
 
 const init = async() => {
     await server.register([
-        // HapiAuthJWT2,
+        HapiAuthJWT2,
         ...PluginHapiSwagger,
         ...PluginHapiPagination
     ])
 
     server.route([...routes])
 
-    // await PluginHapiAuthJWT2(server);
+    await PluginHapiAuthJWT2(server);
 
     await server.start();
 
