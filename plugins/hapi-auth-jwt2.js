@@ -1,4 +1,4 @@
-const config = require('../config')
+const { development: { jwtsecret } } = require('../config/config')
 
 const validate = (decode, resquest, callback) => {
     let error;
@@ -14,10 +14,10 @@ const validate = (decode, resquest, callback) => {
 }
 
 module.exports = (server) => {
-    console.log(config.jwtsecret)
+
     server.auth.strategy('jwt', 'jwt', {
-        key: config.jwtsecret,
-        validateFunc: validate
+        key: jwtsecret,
+        validate: validate
     });
 
     server.auth.default('jwt');
