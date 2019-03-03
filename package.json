@@ -6,6 +6,7 @@
   "scripts": {
     "test": "\u001b[A\u001b[B",
     "start": "cross-env NODE_ENV=development node_modules/.bin/nodemon app.js",
+    "debugger": "cross-env NODE_ENV=development node_modules/.bin/nodemon --inspect app.js",
     "createdb:dev": "node_modules/.bin/sequelize db:create",
     "createtable": "node_modules/.bin/sequelize db:migrate",
     "createtableundoall": "node_modules/.bin/sequelize db:migrate:undo:all",
@@ -17,8 +18,11 @@
     "hapi": "^18.1.0"
   },
   "devDependencies": {
+    "boom": "^7.3.0",
     "cross-env": "^5.2.0",
     "env2": "^2.2.2",
+    "eslint": "^5.15.0",
+    "eslint-config-prettier": "^4.1.0",
     "hapi-auth-jwt2": "^8.3.0",
     "hapi-pagination": "^2.1.0",
     "hapi-swagger": "^9.3.0",
@@ -28,6 +32,7 @@
     "mysql2": "^1.6.5",
     "nodemon": "^1.18.9",
     "package": "^1.0.1",
+    "prettier": "^1.16.4",
     "sequelize": "^4.42.0",
     "sequelize-cli": "^5.4.0",
     "vision": "^5.4.4"

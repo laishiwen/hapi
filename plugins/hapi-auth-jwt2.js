@@ -1,23 +1,26 @@
-const { development: { jwtsecret } } = require('../config/config')
+const { development: { jwtsecret:key } } = require('../config/config')
 
-const validate = (decode, resquest, callback) => {
-    let error;
+const validate = (decode, request, callback) => {
+
     const { userId } = decode;
 
+    const credentials = userId ? {userId} : {};
+
     if (!userId) {
-        return callback(error, false, userId)
+        return {isValid:false,credentials,response:'Invalid token'}
     }
 
-    const credentials = { userId };
-
-    return callback(error, true, credentials);
+    return {isValid:true,credentials};
 }
 
 module.exports = (server) => {
 
     server.auth.strategy('jwt', 'jwt', {
-        key: jwtsecret,
-        validate: validate
+        key,
+        validate,
+        verifyOptions: { 
+            algorithms: [ 'HS256' ],
+         }
     });
 
     server.auth.default('jwt');

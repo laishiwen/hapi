@@ -8,7 +8,6 @@ const routes = require('./routes')
 
 const PluginHapiSwagger = require('./plugins/hapi-swagger')
 const PluginHapiPagination = require('./plugins/hapi-pagination')
-
 const PluginHapiAuthJWT2 = require('./plugins/hapi-auth-jwt2')
 
 const server = new Hapi.Server(config);
@@ -21,7 +20,7 @@ const init = async() => {
     ])
 
     server.route([...routes])
-
+    
     await PluginHapiAuthJWT2(server);
 
     await server.start();

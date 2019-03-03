@@ -1,22 +1,27 @@
-const JWT = require('jsonwebtoken')
+const { authToken, cookie_options } = require("../utils");
 
-const GROUP_NAMW = "users"
+const GROUP_NAMW = "users";
 
-module.exports = (Joi) => [{
-    method: 'POST',
-    path: `/${GROUP_NAMW}/createJWT`,
-    handler: async(request, h) => {
+module.exports = ({ users }, { userInfoDefine }) => [
+  {
+    method: "POST",
+    path: `/${GROUP_NAMW}/signup`,
+    handler: async (request, h) => {
+      const { userInfo } = request.payload;
 
-        const payload = {
-            userId: 1,
-            exp: Math.floor(new Date().getTime() / 1000) + 7 * 24 * 60 * 60,
-        }
+      const result = users.findAll({});
 
-        return JWT.sign(payload, 'your-secret')
+      return h.response("hello").state("token", authToken(888), cookie_options);
     },
     config: {
-        tags: ['api', GROUP_NAMW],
-        description: '用于测试的用户 JWT 签发',
-        auth: false
+      tags: ["api", GROUP_NAMW],
+      description: "用户注册",
+      auth: false,
+      validate: {
+        payload: {
+          ...userInfoDefine
+        }
+      }
     }
-}]
+  }
+];
