@@ -1,17 +1,31 @@
-const routeAdmin = require("./admin")
+const Joi = require("joi");
+const models = require("../models");
+const validateHelper = require("../utils/validate-helper");
 
-module.exports = [{
+const orders = require("./orders");
+const shops = require("./shops");
+const users = require("./users");
+
+module.exports = [
+  {
     method: "GET",
     path: "/",
-    handler: (request, reply) => {
-      return reply.file("index.html")
-    }
-  }, {
-    method: "GET",
-    path: "/view",
-    handler: (request, reply) => {
-      return reply.view("default.html")
+    handler: (request, h) => {
+      console.log(request.auth.credentials);
+
+      return "hello HAPI";
+    },
+    config: {
+      tags: ["api", "tests"],
+      description: "测试hello-hapi",
+      validate: {
+        headers: {
+          ...validateHelper["jwtHeaderDefine"]
+        }
+      }
     }
   },
-  ...routeAdmin
-]
+  ...orders(models, validateHelper),
+  ...shops(models, validateHelper),
+  ...users(models, validateHelper)
+];

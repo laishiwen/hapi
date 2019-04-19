@@ -1,25 +1,31 @@
-"use strict"
-const views = require("./views")
-const server = require("./server")
-const routes = require("./routes")
-const models = require("./models")
-const plugins = require("./plugin")
+require('env2')('./.env')
 
-const { initDb } = require('./libs')
+const Hapi = require('hapi');
+const HapiAuthJWT2 = require('hapi-auth-jwt2');
 
-const start = async() => {
-    await server.register(plugins)
+const config = require('./config')
+const routes = require('./routes')
 
-    await server.views(views)
+const PluginHapiSwagger = require('./plugins/hapi-swagger')
+const PluginHapiPagination = require('./plugins/hapi-pagination')
+const PluginHapiAuthJWT2 = require('./plugins/hapi-auth-jwt2')
 
-    await routes.forEach(route => server.route(route))
+const server = new Hapi.Server(config);
 
-    await server.start(err => {
-        if (err) throw err
-    })
-    console.log(`Server running at: ${server.info.uri}`)
+const init = async() => {
+    await server.register([
+        HapiAuthJWT2,
+        ...PluginHapiSwagger,
+        ...PluginHapiPagination
+    ])
+
+    server.route([...routes])
+    
+    await PluginHapiAuthJWT2(server);
+
+    await server.start();
+
+    console.log(`Server running at: ${server.info.uri}`);
 }
 
-start().then(res => {
-    initDb(models)
-})
+init();
